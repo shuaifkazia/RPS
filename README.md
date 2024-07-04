@@ -48,18 +48,19 @@ Note: All the API endpoints have been integrated with token authentication. Befo
 
 ### Applications and Endpoints
 
-| Endpoint         | Description       | Method | Payload | Note                                                |
-|------------------|-------------------|--------|---------|-----------------------------------------------------|
-| /user/register   | Create new user   | POST   | `{ "fullName": "string", "username": "string", "email": "string", "password": "string" }` | |
-| /user/login      | Authenticate user | POST   | `{ "username": "string", "password": "string" }` | |
-| /user/resetpassword | Reset password | POST | `{ "username": "string", "password": "string" }` | Bearer Token in header required for password change |
-| /game/start-game-session/ | Start a new game session | POST | `{}` | Bearer Token in header required |
-| /game/record-player-move/{session_id} | Record player move in a game | POST | `{ "playerMove": "string" }` | Options: ROCK, PAPER, SCISSORS; Bearer Token in header required |
-| /game/user-game-history/ | Get user's game history | GET | `{}` | Bearer Token in header required |
-| /payment/initiate-payment/ | Initiate payment | POST | `{ "amount": "string", "currency": "string", "transaction_type": "string" }` | Bearer Token in header required |
-| /payment/initiate-payment/ | Get user payment history | GET | `{}` | Bearer Token in header required |
-| /payment/success/ | Redirection endpoint for PayPal approval | GET | | None |
-| /payment/cancel/ | Redirection endpoint for PayPal payment cancellation | GET | | None |
+| Endpoint                               | Description                               | Method | Payload                                                                                   | Note                                                |
+|----------------------------------------|-------------------------------------------|--------|-------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| `/user/register`                       | Create new user                           | POST   | `{ "fullName": "string", "username": "string", "email": "string", "password": "string" }` |                                                     |
+| `/user/login`                          | Authenticate user                         | POST   | `{ "username": "string", "password": "string" }`                                           |                                                     |
+| `/user/resetpassword`                  | Reset password                            | POST   | `{ "username": "string", "password": "string" }`                                           | Bearer Token in header required for password change |
+| `/game/start-game-session/`            | Start a new game session                  | POST   | `{}`                                                                                      | Bearer Token in header required                     |
+| `/game/record-player-move/{session_id}`| Record player move in a game              | POST   | `{ "playerMove": "string" }`                                                               | Options: ROCK, PAPER, SCISSORS; Bearer Token in header required |
+| `/game/user-game-history/`             | Get user's game history                   | GET    | `{}`                                                                                      | Bearer Token in header required                     |
+| `/payment/initiate-payment/`           | Initiate payment                          | POST   | `{ "amount": "string", "currency": "string", "transaction_type": "string" }`                | Bearer Token in header required                     |
+| `/payment/user-transaction-history/`   | Get user payment history                  | GET    | `{}`                                                                                      | Bearer Token in header required                     |
+| `/payment/success/`                    | Redirection endpoint for PayPal approval  | GET    |                                                                                           | None                                                |
+| `/payment/cancel/`                     | Redirection endpoint for PayPal cancellation | GET |                                                                                           | None                                                |
+
 
 
 Feel free to use this table as a reference for your project! 🚀🎮
