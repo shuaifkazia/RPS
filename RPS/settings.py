@@ -89,8 +89,12 @@ WSGI_APPLICATION = 'RPS.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'RPS',#your databse name
+        'USER': 'postgres',#your postgress username
+        'PASSWORD': 'admin',#your postgress paswword
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
