@@ -9,7 +9,8 @@ This is the backend API for the Rock-Paper-Scissors game, implemented using Djan
 Clone the Repository
 
 ```bash
-git clone https://github.com/https://github.com/shuaifkazia/RPS.git 
+git clone https://github.com/shuaifkazia/RPS.git 
+
 ```
 
 ```bash
