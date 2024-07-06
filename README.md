@@ -10,6 +10,7 @@ Clone the Repository
 
 ```bash
 git clone https://github.com/shuaifkazia/RPS.git 
+
 ```
 
 ```bash
